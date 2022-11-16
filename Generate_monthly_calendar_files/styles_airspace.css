@@ -8,6 +8,10 @@ body {
     --grid-gap: 1px;
     --day-label-size: 20px;
   }
+
+  input.courseDate {
+    width: 50px;;
+  }
   
   ol,
   li {
