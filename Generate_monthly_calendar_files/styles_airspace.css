@@ -204,14 +204,18 @@ caption {
 
 li p.level1 {
   background-color: #6fc8f5;
+  font-size: 13px;
 }
 li p.level2 {
   background-color: #c0ed9b;
+  font-size: 13px;
 }
 li p.level3 {
   background-color: #f39bb3;
+  font-size: 13px;
 }
 
 li p.tutor {
   background-color: #e3f4eb;
+  font-size: 13px;
 }
