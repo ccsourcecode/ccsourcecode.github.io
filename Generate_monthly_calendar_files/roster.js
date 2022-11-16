@@ -1248,4 +1248,40 @@ function assignment() {
 
   alert('Roster assigned. Please check.');
 
+  updateCalendar();
 }
+
+function updateCalendar() {
+    course_date = [];
+    $('table.courseTable tr td:nth-child(1) input').each(function(index) {
+        course_date.push($(this).val());
+    });
+
+    course_code = [];
+    $('table.courseTable tr td:nth-child(2)').each(function(index) {
+        course_code.push($(this).html());
+    })
+
+    course_level = [];
+    $('table.courseTable tr td:nth-child(5)').each(function(index) {
+        courseLevel = $(this).html();
+        courseLevel = courseLevel.substr(courseLevel.length - 1);
+        course_level.push(courseLevel);
+    })
+
+    course_tutor = [];
+    $('table.courseTable tr td:nth-child(6) select :selected').each(function(index) {
+        course_tutor.push($(this).text());
+    })
+
+    course_date.forEach(function (value, index) {
+        var dayItem = $('div.calendar-month ol li.calendar-day.day_' + course_date[index]);
+        // clear the content first
+        dayItem.html('');
+        // append the elements
+        dayItem.append('<span>' + value + '</span>');
+        dayItem.append('<p class="level' + course_level[index] + '">' + course_code[index] + '</p> ');
+        dayItem.append('<p class="tutor">' + course_tutor[index] + '</p> ');
+    })
+
+    }
