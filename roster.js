@@ -107,7 +107,7 @@ var monthData = [{
       "dateOfWeek": 0,
       "course": "",
       "courseCode": "",
-      "level": "",
+      "level": "", 
       "assigned": false,
       "assignedTo": ""
   },
