@@ -196,7 +196,22 @@ caption {
   max-height: 98vh;
   overflow: auto;
 }
+
 [role="region"][aria-labelledby][tabindex]:focus {
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
   outline: 0;
+}
+
+li p.level1 {
+  background-color: #6fc8f5;
+}
+li p.level2 {
+  background-color: #c0ed9b;
+}
+li p.level3 {
+  background-color: #f39bb3;
+}
+
+li p.tutor {
+  background-color: #e3f4eb;
 }
